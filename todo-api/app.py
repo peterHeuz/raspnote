@@ -1,2 +1,3 @@
 # Just a little platzhalter and nice hello :)
-print("Hallo from Python to the World!")
+print("\n\nHallo from Python to the World!")
+print("-----------------------------------\n")
