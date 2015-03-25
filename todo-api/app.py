@@ -40,7 +40,7 @@ def create_task():
 	if not request.json or not 'title' in request.json:
 		abort(400)
 	task={
-		'id': taskss[-1]['id'] + 1,
+		'id': tasks[-1]['id'] + 1,
 		'title': request.json['title'],
 		'description': request.json.get('description', ""),
 		'done': False
@@ -50,7 +50,7 @@ def create_task():
 
 @app.errorhandler(404)
 def not_found(error):
-	return make_response(jsonify({'error': 'Not_found'}), 404)
+	return make_response(jsonify({'error': 'Not_found, too bad'}), 404)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
